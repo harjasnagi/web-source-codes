@@ -1,0 +1,448 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body {
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------------NAVBAR WORKING----------------------*/
+.logo{
+    width: 100px;
+    height: auto;
+}
+.heading{
+    line-height: 2.5;
+    font-size: 70px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: #eb7a23;
+}
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+/* ------------------------NAVBAR ENDS----------------------*/
+.navbar{
+    padding: 0;
+}
+.bgg{
+    position: absolute;
+    background: rgb(235,122,35);
+    background: linear-gradient(90deg, rgba(235,122,35,1) 0%, rgba(62,65,154,0.7511379551820728) 99%, rgba(0,212,255,1) 100%);
+    z-index: -1;
+}
+.brand-title{
+    /*padding: 30px 0px 10px 0px;*/
+    padding-top: 30px;
+    text-align: right;
+    /*padding-left: 50px;*/
+}
+/* ------------------------NAVBAR FINAL END----------------------*/
+
+
+/*-----------------Learn more mybtn animation------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+a {
+     text-transform: uppercase;
+}
+ .ct-btn {
+     position: relative;
+     letter-spacing: 0.20em;
+     padding: 1rem 2.5rem;
+     top: 80px;
+     font-size: 18px;
+     color: white;
+}
+ .ct-btn::after, .ct-btn::before {
+     content: "";
+     position: absolute;
+     height: 85%;
+     width: 50%;
+     transform: skewX(30deg);
+     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     z-index: -2;
+}
+ .ct-btn::before {
+     background-color: #3e419a;
+     top: -0.3rem;
+     left: -0.1rem;
+}
+ .ct-btn::after {
+     background-color: #eb7a23;
+     top: 0.5rem;
+     left: 6.5rem;
+}
+ .ct-btn:hover::before, .ct-btn:hover::after {
+     top: 0;
+     transform: skewx(0deg);
+     text-decoration: none !important;
+     color: white !important;
+}
+ .ct-btn:hover::after {
+     left: 0.1rem;
+}
+ .ct-btn:hover::before {
+     left: 6.3rem;
+}
+.mybtn0{
+    background-color: #8082ae;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none !important;
+    padding: 22px 28px;
+    color: black;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+.mybtn0:hover{
+    background-color: #3e419a;
+    color: white;
+}
+/*-------------------- mybtn animation ends --------------------*/
+
+.welcome-outer{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+.welcome-1{
+    height: 100%;
+}
+.welcome-1 p{
+    padding-top: 20px;
+
+}
+.youtube{
+    border: 5px double  #eb7a23;
+}
+.welcome-1 h1{
+    justify-content: center;
+
+}
+.fourboxes{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.fourboxes h1{
+    font-family: 'Frank Ruhl Libre', serif;
+}
+.fourboxes p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+.section3{
+    margin-left: 0;
+    background: linear-gradient(-45deg, #F2B057, #eb7a23);
+    clip-path: ellipse(100% 50% at 50% 50%);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+.section3 h3{
+    font-family: 'Frank Ruhl Libre', serif;
+}
+.changes{
+    text-align: center;
+    font-size: 25px;
+}
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.benefitnew{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.benefitnew .card{
+    position: relative;
+    max-width: 300px;
+    height: 220px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out !important;
+}
+.benefitnew .card:hover{
+    /*height: auto;*/
+    height: auto;
+}
+.benefitnew .card .imgBx{
+    position: relative;
+    width: 86%;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.benefitnew .card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.benefitnew .card .content{
+     position: relative;
+     margin-top: -140px;
+     padding: 10px 15px;
+     text-align: center;
+     color: #111;
+     visibility: hidden;
+     opacity: 0;
+     transition: 0.3s ease-in-out !important;
+}
+.benefitnew .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -60px;
+    transition-delay: 0.3s ease-in-out !important;
+}
+.section6{
+    background: linear-gradient(-45deg, #F2B057, #eb7a23);
+    transition: background 1s linear;
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+.section6 h1{
+    font-family: 'Frank Ruhl Libre', serif;
+}
+.myimg1{
+    width: 350px;
+    height: auto;
+    padding-top: 30px;
+    padding-left: 100px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+.foot-two{
+    display: flex;
+    margin-top: 50px;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.mybtn2{
+    display: none;
+}
+.mybtn {
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 22px 28px;
+    background-color: #8082ae;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    color: black;
+}
+.mybtn:hover{
+    background-color: #3e419a;
+    color: white;
+}
+.footerlogo{
+    width: 90%;
+    height: auto;
+}
+.foot-btn{
+    display: flex;
+    align-items: center;
+
+}
+.hlist{
+    margin-top: 30px;
+    list-style-type:none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+}
+.hlist li { 
+    list-style-type: none;
+    padding: 10px 10px;
+}
+/* ------------------------MOBILE FRIENDLY----------------------*/
+
+@media (max-width: 800px) {
+    body{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .brand-title{
+        padding: 10px 0px 10px 0px;
+        text-align: center !important;
+    }
+    .logo{
+        width: 70px;
+        height: auto;
+    }
+    .heading{
+        font-size: 40px;
+        line-height: 1 !important;
+        /*white-space: nowrap;
+        overflow: hidden;*/
+        margin-top: 100px;
+    }
+    .welcome-outer{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .welcome-1 p{
+        padding-top: 5px;
+    }
+    .youtube{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .fourboxes h1{
+        font-size: 30px;
+    }
+    .fourboxes i{
+        margin: 0 0 10px 0;
+    }
+    .fourboxes p{
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+    .connect2{
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    .section3 h3{
+        font-size: 22px;
+    }
+    .benefit{
+        padding: 5px 10px 30px 10px;
+        font-size: 22px;
+    }
+    .benefit img{
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        height: auto;
+    }
+    .text-middle {
+        top: 40%;
+        left: 65%;
+        width: 90%;
+
+    }
+    .benefit p{
+        font-size: 19px;
+        width: 70%;
+    }
+    .foot-two{
+        margin-top: 20px;
+    }
+    .foot-two h1{
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 30px;
+        max-width: 80%;
+    }
+    .mybtn00{
+        margin-bottom: 40px;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    .mybtn {
+        margin-right: auto;
+        margin-left: auto;
+        display: none;
+    }
+    .mybtn2 {
+        display: block;
+        border: 2px solid black;
+        border-radius: 30px;
+        text-decoration: none;
+        padding: 10px 28px;
+        max-width: 50%;
+        text-align: center;
+        margin: 0 auto 30px auto;  
+        color: black;
+        background-color: #8082ae;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        transition: 0.3s;
+    }
+    .mybtn2:hover{
+        background-color: #3e419a;
+        color: white;
+    }
+
+    /*trying31231231313*/
+    .ct-btn {
+        font-size: 14px;
+        letter-spacing: 0.20em;
+        padding: 1rem 2.5rem;
+        top: 20px;
+    }
+    .ct-btn::before {
+        top: -0.3rem;
+        left: -0.1rem;
+    }
+    .ct-btn::after {
+        top: 0.3rem;
+        left: 4.7rem;
+    }
+    .ct-btn:hover::after {
+        left: 0.1rem;
+    }
+    .ct-btn:hover::before {
+        left: 4.5rem;
+    }
+    /*trying 213131313123*/
+    .changes{
+        font-size: 20px;
+    }
+    .hlist{
+        margin-top: 0px;
+    }
+}

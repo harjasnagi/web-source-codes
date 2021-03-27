@@ -1,0 +1,104 @@
+.top-logo{
+	width: 200px;
+	height: auto;	
+}
+.bd{
+	border:1px solid yellow;
+}
+.my-head{
+	text-align: center; 
+	padding-top: 250px;
+}
+.social-out{
+	/*padding: 0 50px 0 50px;*/
+}
+.social-btn{
+	width: 250px;
+	height: 100px;
+	border: 1px solid red;
+}
+.social-extra{
+	width: 250px;
+	height: 100px;
+}
+.navvy{  
+  	display: inline-block;
+  	position: relative;
+  	font-size: 13px !important;
+}
+.navvy::first-letter{
+	color: #BE1E2D;
+}
+.navvy:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navvy:hover:after{
+	background-color: #BE1E2D;
+	width: 100%; 
+  	left: 0; 
+}
+.pp1{
+	font-size: 25px;
+}
+.lii{
+	list-style: none;
+	font-size: 20px;
+}
+.lii:before{
+	content: "\25B9";
+	color: #BE1E2D;
+	margin-right: 10px;
+	font-size: 25px;
+}
+.social-img{
+	padding: 10px 0 10px 0;
+	width: 120px;
+	height: auto;
+	opacity: 0.65;
+	transition: 0.2s;
+}
+.social-img:hover{
+	transform: scale(0.9);
+	box-shadow: 0 0 0 8px #000000;
+	opacity: 1;
+  	transition: .5s ease;
+
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	width: 50%;
+   }
+
+@media (max-width: 990px){
+	.my-head{
+		padding-top: 0;
+	}
+	.social-extra{
+		display: none;
+	}
+}
+@media (max-width: 960px){
+	header.masthead{
+		/*background-repeat: no-repeat;*/
+ 		background-size: auto 100% !important;
+		/*background: url(../my-new-bg-m.jpeg);*/
+	}
+	.social-img{
+		padding: 10px 0 10px 0;
+		width: 80px;
+		height: auto;
+		opacity: 0.65;
+		transition: 0.2s;
+	}
+	.lii{
+		font-size: 23px;
+	}
+}

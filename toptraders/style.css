@@ -1,0 +1,631 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e0e0;
+}
+.go-top{
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 2;
+    transform: scale(3.5);
+    cursor: pointer;
+    color: rgb(88, 140, 69, 0.99);
+    transition: 0.15s ease;
+}
+.go-top:hover{
+    color: rgb(255, 0, 0, 0.5);
+}
+
+/* ------------- preloader here --------------- */
+.loader-outer{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    background-color: rgb(0,0,0,0.75);
+}
+.loader {
+    position: fixed;
+    left: 47%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+  
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* ------------- preloader ends -------------- */
+
+/* -------------- navbar starts here -------------- */
+.topnav {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    background-color: #1A5930;
+    z-index: 1;
+    box-shadow:  4px 4px 16px #7b7b7b, -8px -8px 16px #ffffff;
+}
+.nav-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+}
+.topnav a:hover {
+    /* background-color: #ddd; */
+    background: rgb(255, 0, 0, 0.5);
+    /* color: black; */
+} 
+.topnav img{
+    width: 15px;
+    height: auto;
+    transform: scale(2.5);
+}
+.topnav .icon {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-right: 12px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+/* -------------- navbar ends here -------------- */
+
+/* -------------- progress bar starts -------------- */
+.progress-container{
+    background-color: rgb(88, 140, 69, 0.99);
+    height: 100%;
+    width: 10px;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
+.progress-bar{
+    /* height: 5px; */
+    width: 10px;
+    background: rgb(255, 0, 0, 0.5);
+}
+/* -------------- progress bar ends -------------- */
+
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
+}
+.bg-m{
+    display: none;
+}
+/* .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(50, 50, 50, 0.5);
+} */
+.learn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 10%);
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+}
+.learn h1{
+    font-size: 60px;
+}
+.learn p{
+    font-size: 20px;
+}
+.learn a{
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 15px 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    /* box-shadow: inset 4px 4px 10px #929292, inset -1px -1px 2px #ffffff; */
+    background: rgb(255, 0, 0, 0.5);
+    color: white;
+    transition: 0.2s;
+    line-height: 1.4;
+}
+.learn a:hover{
+    background: rgb(88, 140, 69, 0.99);
+    /* box-shadow: inset -3px -3px 6px #ffffff, 0px 0px 0px black; */
+    color: white;
+}
+.bd{
+    border: 1px solid black;
+}
+
+/* -------------- Service starts -------------- */
+.service-head{
+    font-family: 'Merriweather Sans', sans-serif;
+    text-align: center;
+    width: 400px;
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    border-radius: 50px;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: whitesmoke;
+    line-height: 1.4;
+    margin: 0px 0px 50px;
+    padding-top: 10px;
+}
+.serv-1 img{
+    width: 250px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.serv-2 img{
+    width: 220px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.serv-3 img{
+    width: 200px;
+    height: auto;
+    /* border: 1px solid black; */
+}
+.service-card-inner h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.service-card-inner p{
+    font-family: 'Open Sans', sans-serif;
+}
+.service-card-inner {
+    width: 90%;
+    min-height: 475px;
+    margin: 0px auto 0px auto;
+    padding: 20px 30px 20px 30px;
+    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
+    text-align: justify;
+    transition: 0.25s;
+    background: #e6e6e6;
+    border-radius: 20px;
+}
+.service-card-inner:hover{
+    transform: scale(1.04);
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    background-color: rgb(88, 140, 69, 0.5);
+}
+/* -------------- Service ends -------------- */
+
+/* -------------- Parallax quote -------------- */
+.parallax {
+    position: relative;
+    background-image: url("assets/parallax.jpg");  /* The image used */
+    min-height: 400px;  /* Set a specific height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.2), -2px -2px 10px 0 rgba(255, 255, 255, 0.55);
+    border-radius: 30px;
+    padding: 30px 30px 10px;
+    background-color: rgb(0, 0, 0, 0.7);
+    text-align: center;
+    text-transform: uppercase;
+    width: 70%;
+    line-height: 1.5;
+    font-size: 20px;
+}
+.parallax p{
+    text-align: right;
+}
+/* -------------- Parallax ends -------------- */
+
+/* -------------- About section starts -------------- */
+.about-main{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px 10px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
+    border-radius: 40px;
+}
+.about-left img{
+    width: 100%;
+    height: auto;
+    margin: 30px;
+}
+.about-right h1{
+    margin: 20px 0px;
+    width: 250px;
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: whitesmoke;
+    line-height: 1.4;
+    font-family: 'Merriweather Sans', sans-serif;
+    /* padding: 20px 0px 10px; */
+}
+.about-para{
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    border-radius: 40px;
+    margin: 10px 20px 20px;
+    padding: 20px 0px 10px;
+    background: rgb(88, 140, 69, 0.4);
+}
+.about-right p{
+    padding: 0px 50px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+}
+/* -------------- About ends -------------- */
+
+/* -------------- Contact section starts -------------- */
+.contact-main{
+    width: 60%;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
+    border-radius: 40px;
+    padding: 20px 0px 10px;
+}
+.contact-main h1{
+    margin: 20px 0px;
+    width: 400px;
+    text-align: center;
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    border-radius: 50px;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: whitesmoke;
+    line-height: 1.4;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.social-outer{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #9d9d9d, inset -5px -5px 10px #ffffff;
+    display: inline-block;
+    margin: 10px 20px;
+}
+.social-inner{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -5%);
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    box-shadow:  5px 5px 10px #747474, -5px -5px 10px #ffffff;
+    transition: 0.5s ease;
+}
+.social-inner img{
+    width: 118px;
+    height: 118px;
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+}
+.social-inner img:hover{
+    transform: scale(1.04);
+}
+.social-inner:hover{
+    box-shadow:  10px 10px 20px #747474, -10px -10px 20px #ffffff;
+}
+/* -------------- Contact ends -------------- */
+
+/* -------------- Footer starts -------------- */
+.footer-main{
+    width: 100%;
+    min-height: 300px;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: 50px;
+    background: #e0e0e0;
+    box-shadow: inset 7px 7px 14px #a8a8a8,inset -7px -7px 14px #ffffff;
+}
+.footer-main img{
+    width: 300px;
+    height: auto;
+    margin: 0px 30px;
+}
+.footer-list{
+    
+}
+.footer-list ul{
+    list-style-type: none;
+    margin-top: 40px;
+}
+.footer-list a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.footer-list a:hover{
+    color: green;
+}
+.footer-3{
+    margin-top: 50px;
+}
+/* -------------- Footer ends -------------- */
+
+/* partner broker css starts*/
+.brok-outer{
+    border-radius: 40px;
+    background: #e0e0e0;
+    box-shadow: inset 6px 6px 12px #989898, inset -6px -6px 12px #ffffff;
+    padding: 20px 0px;
+}
+.brok-h1{
+    padding-top: 10px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow:  10px 10px 20px #b3b3b3, -10px -10px 20px #ffffff;
+    border-radius: 50px;
+    width: 400px;
+}
+.brok-1,.brok-2{
+    margin: 40px 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+.brok-1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  6px 6px 12px #797979, -6px -6px 12px #ffffff;
+}
+.brok-1 p{
+    margin: 30px 0px 0px;
+}
+.brok-1 a{
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  5px 5px 10px #6e6e6e,-5px -5px 10px #ffffff;
+    color: black;
+    transition: 0.25s;
+}
+.brok-1 a:hover{
+    background: rgb(88, 140, 69, 0.8);
+    color: white;
+}
+.brok-2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  6px 6px 12px #797979, -6px -6px 12px #ffffff;
+}
+.brok-2 p{
+    margin: 30px 0px 0px;
+}
+.brok-2 a{
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  5px 5px 10px #6e6e6e,-5px -5px 10px #ffffff;
+    color: black;
+    transition: 0.25s;
+}
+.brok-2 a:hover{
+    background: rgb(88, 140, 69, 0.8);
+    color: white;
+}
+/* partner broker css ends */
+
+/* making mobile friendly */
+@media (max-width: 800px){
+    .topnav{
+        position: absolute;
+    }
+    #myVideo {
+        display: none;
+    }
+    .bg-m{
+        display: block;
+        position: relative;
+    }
+    .bg-m img{
+        width: 100%;
+        height: auto;
+    }
+    .learn{
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, 10%);
+        width: 100%;
+    }
+    .learn h1{
+        font-size: 50px;
+    }
+    
+    /* service starts here */
+    .service-head{
+        width: 300px;
+        margin: 40px 0px 15px;
+        font-size: 35px;
+    }
+    .service-card-inner {
+        width: 88vw;
+        min-height: 475px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* parallax starts */
+    .parallax {
+        min-height: 80vh;
+    }
+    .parallax-text {    
+        width: 90%;
+    }
+    
+    /* about starts */
+    .about-main{
+        width: 90vw;
+    }
+    .about-left img{
+        width: 70vw;
+    }
+    .about-right h1{
+        font-size: 32px;
+    }
+    .about-para{
+        margin: 10px 10px 20px;
+        padding: 30px 0px 10px;
+        line-height: 1.3;
+    }
+    .about-right p{
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    /* contact starts */
+    .contact-main{
+        width: 80vw;
+    }
+    .contact-main h1{
+        margin: 20px 0px;
+        font-size: 28px;
+        width: 250px;
+    }
+    .social-outer{
+        position: relative;
+        width: 130px;
+        height: 130px;
+        margin: 10px 10px;
+    }
+    .social-inner{
+        top: 19%;
+        width: 90px;
+        height: 90px;
+    }
+    .social-inner img{
+        width: 92px;
+        height: 92px;
+    }
+    .loader{
+        left: 38%;
+        top: 38%;
+    }
+
+    /* footer here */
+    .footer-main{
+        min-height: 300px;
+    }
+    .footer-main img{
+        width: 300px;
+        height: auto;
+        margin: 0px 0px;
+    }
+    .footer-list ul{
+        margin-top: 0px;
+        margin-left: 80px;
+    }
+    .footer-3{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    /* partner brokers */
+    .brok-outer{
+        width: 90vw;
+        padding: 20px 0px;
+    }
+    .brok-h1{
+        font-size: 32px;
+        width: 350px;
+    }
+    .brok-1,.brok-2{
+        margin: 30px 20px;
+    }
+    .brok-1 p{
+        margin: 30px 10px 0px;
+    }
+    .brok-2{
+        margin-top: 50px;
+    }
+    .brok-1 a:hover{
+        background: rgb(88, 140, 69, 0.8);
+        color: white;
+    }
+    .brok-2 p{
+        margin: 30px 10px 0px;
+    }
+    .brok-2 a{
+        text-decoration: none;
+        border-radius: 40px;
+        padding: 10px 20px;
+        background: linear-gradient(145deg, #cacaca, #f0f0f0);
+        box-shadow:  5px 5px 10px #6e6e6e,-5px -5px 10px #ffffff;
+        color: black;
+        transition: 0.25s;
+    }
+    .brok-2 a:hover{
+        background: rgb(88, 140, 69, 0.8);
+        color: white;
+    }
+}
+
